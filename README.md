@@ -2,6 +2,8 @@
 
 A containerized deployment of SmolLM2 language model using a microservices architecture. The project demonstrates Docker container communication with one container serving the model and another handling user interactions.
 
+Related previous works are avaialble on [Hugging Face](https://huggingface.co/spaces/dhairyashil/SmolLM2_GroundUp) and [Github](https://github.com/dhairyag/SmolLM2_GroundUp) repositories.
+
 ## Project Structure
 ```bash
 .
