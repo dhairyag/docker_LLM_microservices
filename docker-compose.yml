@@ -1,0 +1,29 @@
+version: '3'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  app1:
+    build: ./app1
+    volumes:
+      - ./smollm2_model_final:/app/smollm2_model_final
+    ports:
+      - "5001:5000"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  app2:
+    build: ./app2
+    ports:
+      - "8000:8000"
+    depends_on:
+      - app1
+    networks:
+      - app-network 

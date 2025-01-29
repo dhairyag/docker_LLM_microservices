@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmolLM2 Text Generator</title>
+    <style>
+        body { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .error { color: red; }
+        .form-group { margin-bottom: 15px; }
+        textarea { width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>SmolLM2 Text Generator</h1>
+    
+    {% if error %}
+    <div class="error">Error: {{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="form-group">
+            <label for="prompt">Prompt:</label><br>
+            <textarea name="prompt" rows="3" required>{{ prompt if prompt else '' }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="max_length">Max Length:</label>
+            <input type="number" name="max_length" value="100" min="10" max="500">
+        </div>
+
+        <div class="form-group">
+            <label for="temperature">Temperature:</label>
+            <input type="number" name="temperature" value="0.8" min="0.1" max="2.0" step="0.1">
+        </div>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if generated_text %}
+    <h2>Generated Text:</h2>
+    <div class="generated-text">
+        {{ generated_text }}
+    </div>
+    {% endif %}
+</body>
+</html> 
