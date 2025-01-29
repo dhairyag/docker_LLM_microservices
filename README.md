@@ -2,6 +2,25 @@
 
 A containerized deployment of SmolLM2 language model using a microservices architecture. The project demonstrates Docker container communication with one container serving the model and another handling user interactions.
 
+## Project Structure
+```bash
+.
+├── app1/ # Model Server
+│ ├── Dockerfile
+│ ├── requirements.txt
+│ ├── server.py # FastAPI server
+│ ├── generator.py # Text generation logic
+│ ├── model.py # Model architecture
+│ └── templates/ # Monitoring interface
+├── app2/ # Web Client
+│ ├── Dockerfile
+│ ├── requirements.txt
+│ ├── client.py # Flask server
+│ └── templates/ # Web interface
+├── docker-compose.yml # Container orchestration
+└── smollm2_model_final/ # (Downloaded from Hugging Face as explained above)
+```
+
 ## Microservices Architecture
 
 ### Current Implementation
@@ -132,25 +151,6 @@ docker-compose up --build
 - `top_k`: Top-k sampling parameter (default: 50)
 - `top_p`: Nucleus sampling parameter (default: 0.9)
 - `repetition_penalty`: Penalty for repeated tokens (default: 1.5)
-
-## Project Structure
-```bash
-.
-├── app1/ # Model Server
-│ ├── Dockerfile
-│ ├── requirements.txt
-│ ├── server.py # FastAPI server
-│ ├── generator.py # Text generation logic
-│ ├── model.py # Model architecture
-│ └── templates/ # Monitoring interface
-├── app2/ # Web Client
-│ ├── Dockerfile
-│ ├── requirements.txt
-│ ├── client.py # Flask server
-│ └── templates/ # Web interface
-├── docker-compose.yml # Container orchestration
-└── smollm2_model_final/ # (Downloaded from Hugging Face as explained above)
-```
 
 ## Technical Implementation Details
 
