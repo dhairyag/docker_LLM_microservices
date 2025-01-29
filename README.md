@@ -21,6 +21,12 @@ A containerized deployment of SmolLM2 language model using a microservices archi
 └── smollm2_model_final/ # (Downloaded from Hugging Face as explained above)
 ```
 
+## Demo Screenshots
+Two screenshots are provided below that show the model server and the web client in action.
+App1 is the model server (keeps log of requests and serves the model) and App2 is the web client.
+![App1](./images/app1_demo.png)
+![App2](./screenshots/app2_client_demo.png)
+
 ## Microservices Architecture
 
 ### Current Implementation
