@@ -120,12 +120,12 @@ The architecture could be extended with:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/smollm2-docker-microservices.git
-cd smollm2-docker-microservices
+git clone https://github.com/dhairyag/docker_LLM_microservices
+cd docker_LLM_microservices
 ```
 
 2. Place your trained model files in `smollm2_model_final/`:
-The model for this project can be downloaded from [Hugging Face](https://huggingface.co/spaces/dhairyashil/SmolLM2_GroundUp/tree/main/smollm2_model_final).
+The model for this project can be downloaded from [Hugging Face repository](https://huggingface.co/spaces/dhairyashil/SmolLM2_GroundUp/tree/main/smollm2_model_final).
 ```bash
 smollm2_model_final/
 ├── config.json
