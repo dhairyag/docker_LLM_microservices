@@ -2,6 +2,57 @@
 
 A containerized deployment of SmolLM2 language model using a microservices architecture. The project demonstrates Docker container communication with one container serving the model and another handling user interactions.
 
+## Microservices Architecture
+
+### Current Implementation
+1. **Service Decomposition**
+   - Model Service (app1): Handles ML model inference
+   - Web Service (app2): Manages user interactions
+   - Each service follows Single Responsibility Principle
+
+2. **Independent Deployment**
+   - Separate Dockerfiles and dependencies
+   - Isolated runtime environments
+   - Independent versioning and updates
+
+3. **Decentralized Communication**
+   - REST API communication
+   - No shared resources
+   - API contract through Pydantic models
+
+4. **Independent Scaling**
+   - Model service: Optimized for computation
+   - Web service: Optimized for user interactions
+   - Separate resource allocation
+
+5. **Resilience Patterns**
+   - Automatic retry mechanism
+   - Error isolation
+   - Health monitoring
+
+### Future Enhancements
+The architecture could be extended with:
+
+1. **API Gateway**
+   - Rate limiting
+   - Authentication/Authorization
+   - Request routing
+
+2. **Service Registry**
+   - Dynamic service discovery
+   - Load balancing
+   - Health tracking
+
+3. **Monitoring Stack**
+   - Centralized logging (ELK Stack)
+   - Metrics collection (Prometheus)
+   - Visualization (Grafana)
+
+4. **Circuit Breakers**
+   - Failure detection
+   - Graceful degradation
+   - Auto-recovery
+
 ## Architecture
 
 ### App1: Model Server (FastAPI)
