@@ -23,9 +23,9 @@ A containerized deployment of SmolLM2 language model using a microservices archi
 
 ## Demo Screenshots
 Two screenshots are provided below that show the model server and the web client in action.
-App1 is the model server (keeps log of requests and serves the model) and App2 is the web client.
+App1 (`SmolLM2 API monitor`) is the model server (keeps log of requests and serves the model) and App2 (`SmolLM2 Text Generator`) is the web client.
 ![App1](./images/app1_demo.png)
-![App2](./screenshots/app2_client_demo.png)
+![App2](./images/app2_client_demo.png)
 
 ## Microservices Architecture
 
